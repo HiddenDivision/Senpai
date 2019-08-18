@@ -78,7 +78,7 @@ bot.on('message', msg=>{
 	}
     let args = msg.content.split(" ");
 	switch(args[0]){
-		case 'BD':
+		case 'SP':
             if(args[1] === 'slap'){
                 let ment = msg.mentions.users.first()
                 let message = args.join(" ").slice(30);
