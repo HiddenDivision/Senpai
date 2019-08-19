@@ -6,7 +6,9 @@ bot.on('ready', ()=>{
     bot.user.setActivity("Senpai.", {type: ('LISTENING')})
     console.log('Online.')
     var Channel = bot.channels.get("612823247775596545");
+    var Channel2 = bot.channels.get("613140702305714215");
     Channel.fetchMessage("612833571580936192");
+    Channel2.fetchMessage("613141203868975119");
 })
 
 bot.on('raw', event =>{
@@ -55,6 +57,8 @@ bot.on('messageReactionAdd', (messageReaction, user) =>{
 	var lesbian = messageReaction.message.guild.roles.find("id", "612827678885806090");
 	var bi = messageReaction.message.guild.roles.find("id", "612827471582068737");
 	var other = messageReaction.message.guild.roles.find("id", "612827790701756427");
+	var verified = messageReaction.message.guild.roles.find("id", "613137455494856705");
+	var fan = messageReaction.message.guild.roles.find("id", "612746023919681597");
 	
 	console.log(roleName)
 	var member = messageReaction.message.guild.members.find(member => member.id === user.id);
@@ -64,6 +68,13 @@ bot.on('messageReactionAdd', (messageReaction, user) =>{
             if(messageReaction.message.channel.id === "612823247775596545"){
 		member.addRole(r16.id)
                 console.log("Success.")
+            }
+	}
+	if(roleName === 'yes'){
+            if(messageReaction.message.channel.id === "613140702305714215"){
+		member.removeRole(verified.id)
+		member.addRole(fan.id)
+                console.log("Verified.")
             }
 	}
 	if(roleName === 'sippy'){
@@ -322,7 +333,7 @@ bot.on('messageReactionRemove', (messageReaction, user) =>{
 bot.on('guildMemberAdd', member =>{
     const channel = member.guild.channels.find(channel => channel.id === '612746732601606339')
     if(!channel) return;
-    let role = member.guild.roles.find("id", "612746023919681597");
+    let role = member.guild.roles.find("id", "613137455494856705");
     member.addRole(role.id);
     if(member.avatarURL === null){
         const embed9 = new RichEmbed()
