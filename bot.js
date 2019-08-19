@@ -5,6 +5,62 @@ const superagent = require('superagent');
 bot.on('ready', ()=>{
     bot.user.setActivity("Senpai.", {type: ('LISTENING')})
     console.log('Online.')
+    var Channel = bot.channels.get("612823247775596545");
+    Channel.fetchMessage("612824583636123680");
+    Channel.fetchMessage("612825576608104460");
+    Channel.fetchMessage("612826965233106974");
+    Channel.fetchMessage("612827432612921349");
+    Channel.fetchMessage("601884630270083092");
+    Channel.fetchMessage("601884630270083092");
+})
+
+bot.on('raw', event =>{
+	const eventname = event.t
+	if(eventname === 'MESSAGE_REACTION_ADD')
+	{
+		var reactionChannel = bot.channels.get(event.d.channel_id);
+		if(event.d.message_id === '612824583636123680')
+		{
+			reactionChannel.fetchMessage(event.d.message_id)
+			.then(msg => {
+			var msgReaction = msg.reactions.get(event.d.emoji.name + ":" + event.d.emoji.id);
+			var user = bot.users.get(event.d.user_id)
+			})
+			.catch(err => console.log(err))
+		}
+		else {
+			reactionChannel.fetchMessage(event.d.message_id)
+			.then(msg => {
+			var msgReaction = msg.reactions.get(event.d.emoji.name + ":" + event.d.emoji.id);
+			var user = bot.users.get(event.d.user_id)
+			})
+			.catch(err => console.log(err))
+		}
+	}
+});
+
+bot.on('messageReactionAdd', (messageReaction, user) =>{
+	var roleName = messageReaction.emoji.name
+	var r16 = messageReaction.message.guild.roles.find("id", "612797772428607570");
+	var r18 = messageReaction.message.guild.roles.find("id", "612797979627225105");
+	var r21 = messageReaction.message.guild.roles.find("id", "612797988066033686");
+	console.log(roleName)
+	var member = messageReaction.message.guild.members.find(member => member.id === user.id);
+	if(member)
+	{
+		if(roleName === 'Sip'){
+			member.removeRole(r16.id)
+			console.log("Success.")
+		}
+		if(roleName === 'sippy'){
+			member.removeRole(r18.id)
+			console.log("Success.")
+		}
+		if(roleName === 'gasm'){
+			member.removeRole(r21.id)
+			console.log("Success.")
+		}
+	}
 })
 
 bot.on('guildMemberAdd', member =>{
