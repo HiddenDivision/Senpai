@@ -6,12 +6,7 @@ bot.on('ready', ()=>{
     bot.user.setActivity("Senpai.", {type: ('LISTENING')})
     console.log('Online.')
     var Channel = bot.channels.get("612823247775596545");
-    Channel.fetchMessage("612824583636123680");
-    Channel.fetchMessage("612825576608104460");
-    Channel.fetchMessage("612826965233106974");
-    Channel.fetchMessage("612827432612921349");
-    Channel.fetchMessage("601884630270083092");
-    Channel.fetchMessage("601884630270083092");
+    Channel.fetchMessage("612833571580936192");
 })
 
 bot.on('raw', event =>{
@@ -19,7 +14,7 @@ bot.on('raw', event =>{
 	if(eventname === 'MESSAGE_REACTION_ADD')
 	{
 		var reactionChannel = bot.channels.get(event.d.channel_id);
-		if(event.d.message_id === '612824583636123680')
+		if(event.d.message_id === '612833571580936192')
 		{
 			reactionChannel.fetchMessage(event.d.message_id)
 			.then(msg => {
@@ -44,6 +39,23 @@ bot.on('messageReactionAdd', (messageReaction, user) =>{
 	var r16 = messageReaction.message.guild.roles.find("id", "612797772428607570");
 	var r18 = messageReaction.message.guild.roles.find("id", "612797979627225105");
 	var r21 = messageReaction.message.guild.roles.find("id", "612797988066033686");
+	var m = messageReaction.message.guild.roles.find("id", "612797353014984802");
+	var f = messageReaction.message.guild.roles.find("id", "612797412486021150");
+	var t = messageReaction.message.guild.roles.find("id", "612825158910083092");
+	var n = messageReaction.message.guild.roles.find("id", "612825763447570457");
+	var s = messageReaction.message.guild.roles.find("id", "612797990830342196");
+	var t = messageReaction.message.guild.roles.find("id", "612798931604340736");
+	var ss = messageReaction.message.guild.roles.find("id", "612798785915060253");
+	var nl = messageReaction.message.guild.roles.find("id", "612827205495554063");
+	var open = messageReaction.message.guild.roles.find("id", "612796380972449944");
+	var close = messageReaction.message.guild.roles.find("id", "612796625798299648");
+	var ask = messageReaction.message.guild.roles.find("id", "612796563940704266");
+	var straight = messageReaction.message.guild.roles.find("id", "612827293965877261");
+	var homo = messageReaction.message.guild.roles.find("id", "612827399763132436");
+	var lesbian = messageReaction.message.guild.roles.find("id", "612827678885806090");
+	var bi = messageReaction.message.guild.roles.find("id", "612827471582068737");
+	var other = messageReaction.message.guild.roles.find("id", "612827790701756427");
+	
 	console.log(roleName)
 	var member = messageReaction.message.guild.members.find(member => member.id === user.id);
 	if(member)
@@ -63,6 +75,102 @@ bot.on('messageReactionAdd', (messageReaction, user) =>{
 	if(roleName === 'gasm'){
 	    if(messageReaction.message.channel.id === "612823247775596545"){
                 member.addRole(r21.id)
+                console.log("Success.")
+            }
+	}
+	if(roleName === 'blue'){
+	    if(messageReaction.message.channel.id === "612823247775596545"){
+                member.addRole(m.id)
+                console.log("Success.")
+            }
+	}
+	if(roleName === 'pink'){
+	    if(messageReaction.message.channel.id === "612823247775596545"){
+                member.addRole(f.id)
+                console.log("Success.")
+            }
+	}
+	if(roleName === 'trans'){
+	    if(messageReaction.message.channel.id === "612823247775596545"){
+                member.addRole(t.id)
+                console.log("Success.")
+            }
+	}
+	if(roleName === 'nonbinary'){
+	    if(messageReaction.message.channel.id === "612823247775596545"){
+                member.addRole(n.id)
+                console.log("Success.")
+            }
+	}
+	if(roleName === 'single'){
+	    if(messageReaction.message.channel.id === "612823247775596545"){
+                member.addRole(s.id)
+                console.log("Success.")
+            }
+	}
+	if(roleName === 'taken'){
+	    if(messageReaction.message.channel.id === "612823247775596545"){
+                member.addRole(t.id)
+                console.log("Success.")
+            }
+	}
+	if(roleName === 'seeingsome1'){
+	    if(messageReaction.message.channel.id === "612823247775596545"){
+                member.addRole(ss.id)
+                console.log("Success.")
+            }
+	}
+	if(roleName === 'notinterested'){
+	    if(messageReaction.message.channel.id === "612823247775596545"){
+                member.addRole(nl.id)
+                console.log("Success.")
+            }
+	}
+	if(roleName === 'dmsopen'){
+	    if(messageReaction.message.channel.id === "612823247775596545"){
+                member.addRole(open.id)
+                console.log("Success.")
+            }
+	}
+	if(roleName === 'dmsclosed'){
+	    if(messageReaction.message.channel.id === "612823247775596545"){
+                member.addRole(close.id)
+                console.log("Success.")
+            }
+	}
+	if(roleName === 'askfirst'){
+	    if(messageReaction.message.channel.id === "612823247775596545"){
+                member.addRole(ask.id)
+                console.log("Success.")
+            }
+	}
+	if(roleName === 'heart'){
+	    if(messageReaction.message.channel.id === "612823247775596545"){
+                member.addRole(straight.id)
+                console.log("Success.")
+            }
+	}
+	if(roleName === 'homosexual'){
+	    if(messageReaction.message.channel.id === "612823247775596545"){
+                member.addRole(homo.id)
+                console.log("Success.")
+            }
+	}
+	if(roleName === 'les'){
+	    if(messageReaction.message.channel.id === "612823247775596545"){
+                member.addRole(lesbian.id)
+                console.log("Success.")
+            }
+	}
+	if(roleName === 'bi'){
+	    if(messageReaction.message.channel.id === "612823247775596545"){
+                member.addRole(bi.id)
+                console.log("Success.")
+            }
+	}
+	if(roleName === 'other'){
+	    if(messageReaction.message.channel.id === "612823247775596545"){
+                member.addRole(other.id)
                 console.log("Success.")
             }
 	}
