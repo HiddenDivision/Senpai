@@ -49,15 +49,15 @@ bot.on('messageReactionAdd', (messageReaction, user) =>{
 	if(member)
 	{
 		if(roleName === 'Sip'){
-			member.removeRole(r16.id)
+			member.addRole(r16.id)
 			console.log("Success.")
 		}
 		if(roleName === 'sippy'){
-			member.removeRole(r18.id)
+			member.addRole(r18.id)
 			console.log("Success.")
 		}
 		if(roleName === 'gasm'){
-			member.removeRole(r21.id)
+			member.addRole(r21.id)
 			console.log("Success.")
 		}
 	}
