@@ -48,19 +48,25 @@ bot.on('messageReactionAdd', (messageReaction, user) =>{
 	var member = messageReaction.message.guild.members.find(member => member.id === user.id);
 	if(member)
 	{
-		if(roleName === 'Sip'){
-			member.addRole(r16.id)
-			console.log("Success.")
-		}
-		if(roleName === 'sippy'){
-			member.addRole(r18.id)
-			console.log("Success.")
-		}
-		if(roleName === 'gasm'){
-			member.addRole(r21.id)
-			console.log("Success.")
-		}
+	if(roleName === 'Sip'){
+            if(messageReaction.message.channel.id === "612823247775596545"){
+		member.addRole(r16.id)
+                console.log("Success.")
+            }
 	}
+	if(roleName === 'sippy'){
+	    if(messageReaction.message.channel.id === "612823247775596545"){
+                member.addRole(r18.id)
+                console.log("Success.")
+            }
+	}
+	if(roleName === 'gasm'){
+	    if(messageReaction.message.channel.id === "612823247775596545"){
+                member.addRole(r21.id)
+                console.log("Success.")
+            }
+	}
+    }
 })
 
 bot.on('guildMemberAdd', member =>{
