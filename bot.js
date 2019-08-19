@@ -144,7 +144,7 @@ bot.on('messageReactionAdd', (messageReaction, user) =>{
                 console.log("Success.")
             }
 	}
-	if(roleName === 'heart'){
+	if(roleName === '❤'){
 	    if(messageReaction.message.channel.id === "612823247775596545"){
                 member.addRole(straight.id)
                 console.log("Success.")
