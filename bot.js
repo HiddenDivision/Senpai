@@ -339,7 +339,7 @@ bot.on('guildMemberAdd', member =>{
         const embed9 = new RichEmbed()
         .setAuthor(`Thanks for joining your senpai!`, ``, '')
         .setDescription(`Have fun with your unique senpai, ${member}!`)
-        .setImage(`https://cdn.discordapp.com/attachments/612740129194508300/612751913984983061/Senpai_GIF.gif`)
+        .setImage(`https://cdn.discordapp.com/attachments/574017459171098624/613261655786389504/Senpai.gif`)
         .setColor(0xe6d7fd)
         channel.sendEmbed(embed9)
     }
@@ -347,7 +347,7 @@ bot.on('guildMemberAdd', member =>{
         const embed = new RichEmbed()
         .setAuthor(`Thanks for joining your senpai!`, ``, '')
         .setDescription(`Have fun with your unique senpai, ${member}!`)
-        .setImage(`https://cdn.discordapp.com/attachments/612740129194508300/612751913984983061/Senpai_GIF.gif`)
+        .setImage(`https://cdn.discordapp.com/attachments/574017459171098624/613261655786389504/Senpai.gif`)
         .setColor(0xe6d7fd)
         channel.sendEmbed(embed)
     }
