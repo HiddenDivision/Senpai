@@ -5,15 +5,10 @@ const superagent = require('superagent');
 bot.on('ready', ()=>{
     bot.user.setActivity("Senpai.", {type: ('LISTENING')})
     console.log('Online.')
-    const bump = bot.channels.find(bump => bump.id === '613087256093130762')
     var Channel = bot.channels.get("612823247775596545");
     var Channel2 = bot.channels.get("613140702305714215");
     Channel.fetchMessage("612833571580936192");
     Channel2.fetchMessage("613141203868975119");
-    var reqTimer = setTimeout(function wakeUp() {
-         bump.send(`!d bump`)
-         return reqTimer = setTimeout(wakeUp, 7200000);
-    }, 7200000);
 })
 
 bot.on('raw', event =>{
